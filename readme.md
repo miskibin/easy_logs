@@ -12,25 +12,33 @@ returns highly configurable logger object.
 
 ### Example:
 ```python
-from miskibin.utils import get_logger
-
 logger = get_logger()
-
 logger.debug("debug")
-logger = get_logger(
-    format="%(asctime)s - %(funcName)s - %(levelname)s - %(message)s",
-    disable_existing_loggers=True,
-    logger_name="test",
-)
+logger.info("info")
 logger.warning("warning")
 logger.error("error")
-logger = get_logger(
-    datefmt="%Y-%m-%d %H:%M:%S",
-    format="%(asctime)s - %(message)s",
-    disable_existing_loggers=True,
-    logger_name="test2",
-)
 logger.critical("critical")
 ```
 ### output:
 ![](logging.png)
+# example:
+```python
+logger = get_logger(
+    datefmt="%Y-%m-%d %H:%M:%S",
+    format="%(asctime)s %(levelname)s %(funcName)s %(message)s",
+    disable_existing_loggers=True,
+    logger_name="test2",
+    lvl="INFO",
+)
+
+
+def example_func():
+    logger.debug("debug")
+    logger.info("info")
+    logger.warning("warning")
+    logger.error("error")
+    logger.critical("critical")
+example_func()
+```
+### output:
+![](advenced_logging.png)
