@@ -17,11 +17,12 @@ def get_logger(
     disable_existing_loggers: bool = False,
 ) -> Logger:
     """Get logger with colored logs and filter for ipynb cells.
-    file_name: file that logs will be saved to. If None, logs will not saved to file.
-    lvl: logging level. Default is 10 (DEBUG).
-    formatter: logging formatter.
-    datefmt: date format for logging formatter.
-    disable_existing_loggers: if True, disable existing loggers.
+    Args:
+        `file_name`: file that logs will be saved to. If None, logs will not saved to file.
+        `lvl`: logging level. Default is 10 (DEBUG).
+        `formatter`: logging formatter.
+        `datefmt`: date format for logging formatter.
+        `disable_existing_loggers`: if True, disable existing loggers.
     """
     if disable_existing_loggers:
         logging.config.dictConfig(
