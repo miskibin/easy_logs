@@ -7,6 +7,9 @@ could not find anywhere else.
 returns highly configurable logger object.
 - Every level has its own color. (If it is printed to terminal)
 - Problems with logging messages from `ipynb` cells are resolved.
+- Includes validation for file name and path.
+- Has `disable_existing_loggers` param to disable all other loggers.
+
 ### Example:
 ```python
 from miskibin.utils import get_logger
