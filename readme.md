@@ -40,7 +40,8 @@ def example_func():
     logger.critical("critical")
 example_func()
 ```
-
+## output:
+![](advenced_logging.png)
 ## to install:
 ```bash
 pip install miskibin 
