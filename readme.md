@@ -40,17 +40,8 @@ def example_func():
     logger.critical("critical")
 example_func()
 ```
-### output:
-![](advenced_logging.png)
-## to build:
-```bash
-python setup.py sdist bdist_wheel
-```
+
 ## to install:
 ```bash
 pip install miskibin 
-```
-or 
-```bash
-pip install git+
 ```
