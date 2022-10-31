@@ -1,3 +1,2 @@
 logging.config
 numpy
-matploltlib
