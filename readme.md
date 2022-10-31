@@ -15,10 +15,11 @@ pip install miskibin
 ## modules:
 
 - [miskibin.utils:](#miskibinutils)
-  - [`get_logger()`:](#get_logger)
-- [miskibin.ml:](#miskibinml)
-  - [LinearModel:](#linearmodel)
+  - [`get_logger()`](#get_logger)
+- [miskibin.ml](#miskibinml)
+  - [LinearModel](#linearmodel)
 - [miskibin.cn](#miskibincn)
+  - [AnimatedGraph](#AnimatedGraph)
 
 ## [miskibin.utils](src/miskibin/utils):
 
