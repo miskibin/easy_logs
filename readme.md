@@ -8,8 +8,8 @@ could not find anywhere else.
 ```bash
 pip install miskibin 
 ```
-## tools:
-### [miskibin.utils](src/miskibin/utils.py)
+
+## [miskibin.utils](src/miskibin/utils.py)
 `get_logger()`:
 returns highly configurable logger object.
 - Every level has its own color. (If it is printed to terminal)
@@ -51,3 +51,4 @@ example_func()
 #### output:
 
 <img src="advenced_logging.png" width="500"/>
+
