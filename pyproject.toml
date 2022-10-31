@@ -7,7 +7,7 @@ name = "miskibin"
 version = "1.0.1"
 description = "this is an library with utils for my studies."
 readme = "readme.md"
-authors = [{ name = "Michal Skibinski", email = "mskibinski109@gmail.com" }]
+authors = [{ name = "Michał Skibiński", email = "mskibinski109@gmail.com" }]
 license = { file = "LICENSE" }
 classifiers = [
     "License :: OSI Approved :: MIT License",
