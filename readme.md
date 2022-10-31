@@ -11,13 +11,10 @@ could not find anywhere else.
 pip install miskibin 
 ```
 ## modules:
-- [miskibin](#miskibin)
-  - [installation:](#installation)
-  - [modules:](#modules)
-  - [miskibin.utils:](#miskibinutils)
-    - [`get_logger()`:](#get_logger)
-  - [miskibin.ml:](#miskibinml)
-    - [LinearModel:](#linearmodel)
+- [miskibin.utils:](#miskibinutils)
+  - [`get_logger()`:](#get_logger)
+- [miskibin.ml:](#miskibinml)
+  - [LinearModel:](#linearmodel)
 
 ## [miskibin.utils](src/miskibin/utils):
 module contains some useful functions, that i use in my projects.
