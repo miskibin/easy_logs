@@ -8,16 +8,25 @@ could not find anywhere else.
 ```bash
 pip install miskibin 
 ```
-
-## [miskibin.utils](src/miskibin/utils.py)
-`get_logger()`:
+## modules:
+- [miskibin](#miskibin)
+  - [installation:](#installation)
+  - [modules:](#modules)
+  - [miskibin.utils:](#miskibinutils)
+    - [`get_logger()`:](#get_logger)
+  - [miskibin.ml:](#miskibinml)
+    - [LinearModel:](#linearmodel)
+  
+## [miskibin.utils](src/miskibin/utils):
+module contains some useful functions, that i use in my projects.
+### `get_logger()`:
 returns highly configurable logger object.
 - Every level has its own color. (If it is printed to terminal)
 - Problems with logging messages from `ipynb` cells are resolved.
 - Includes validation for file name and path.
 - Has `disable_existing_loggers` param to disable all other loggers.
 
-### Example 1:
+Example 1:
 ```python
 logger = get_logger()
 logger.debug("debug")
@@ -26,10 +35,10 @@ logger.warning("warning")
 logger.error("error")
 logger.critical("critical")
 ```
-#### output:
+output:
 <img src="logging.png" width="500"/>
 
-### example 2:
+example 2:
 ```python
 logger = get_logger(
     datefmt="%Y-%m-%d %H:%M:%S",
@@ -48,7 +57,14 @@ def example_func():
     logger.critical("critical")
 example_func()
 ```
-#### output:
+output:
 
 <img src="advenced_logging.png" width="500"/>
 
+
+
+## [miskibin.ml](src/miskibin/ml):
+Machine learning module. Contains models, functions and classes for machine learning.
+### LinearModel:
+model with analytical solution for linear regression.
+Implemnted from math formulas.

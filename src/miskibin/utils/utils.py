@@ -1,7 +1,7 @@
 from pathlib import Path
 import logging.config
 from logging import Logger, getLogger
-from ._internal_modules.logging_utils import ColoredFormatter, filter_log_record
+from .logging_utils import ColoredFormatter, filter_log_record
 
 
 class FailedToLoadLoggingConfigException(Exception):
