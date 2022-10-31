@@ -1,3 +1,4 @@
+![example workflow](https://github.com/michalskibinski109/chess_analyse_app/actions/workflows/python-app.yml/badge.svg)
 # miskibin 
 this repo contains some of my scripts and tools, that i 
 could not find anywhere else.
