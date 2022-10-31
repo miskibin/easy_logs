@@ -15,7 +15,7 @@ pip install miskibin
 ## modules:
 
 - [miskibin.utils:](#miskibinutils)
-  - [`get_logger()`](#get_logger)
+  - [get_logger()](#get_logger)
 - [miskibin.ml](#miskibinml)
   - [LinearModel](#linearmodel)
 - [miskibin.cn](#miskibincn)
