@@ -1,4 +1,4 @@
-![example workflow](https://github.com/michalskibinski109/miskibin/blob/main/.github/workflows/python-app.yml/badge.svg)
+![example workflow](https://github.com/michalskibinski109/miskibin/actions/workflows/python-app.yml/badge.svg)
 [![PyPI version](https://badge.fury.io/py/miskibin.svg)](https://badge.fury.io/py/miskibin)
 # miskibin 
 this repo contains some of my scripts and tools, that i 
