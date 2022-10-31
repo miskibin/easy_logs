@@ -12,7 +12,7 @@ returns highly configurable logger object.
 - Includes validation for file name and path.
 - Has `disable_existing_loggers` param to disable all other loggers.
 
-### Example:
+### Example 1:
 ```python
 logger = get_logger()
 logger.debug("debug")
@@ -21,9 +21,10 @@ logger.warning("warning")
 logger.error("error")
 logger.critical("critical")
 ```
-### output:
-![](logging.png)
-# example:
+#### output:
+<img src="logging.png" width="500"/>
+
+### example 2:
 ```python
 logger = get_logger(
     datefmt="%Y-%m-%d %H:%M:%S",
@@ -42,8 +43,10 @@ def example_func():
     logger.critical("critical")
 example_func()
 ```
-## output:
-![](advenced_logging.png)
+#### output:
+
+<img src="advenced_logging.png" width="500"/>
+
 ## to install:
 ```bash
 pip install miskibin 
