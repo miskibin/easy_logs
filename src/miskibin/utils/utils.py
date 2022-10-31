@@ -11,7 +11,7 @@ class FailedToLoadLoggingConfigException(Exception):
 def get_logger(
     file_name: str = None,
     logger_name: str = "miskibin",
-    lvl: int = 10,
+    lvl: int = 20,
     format: str = "%(message)s (%(filename)s:%(lineno)d)",
     datefmt: str = "%H:%M:%S",
     disable_existing_loggers: bool = False,
