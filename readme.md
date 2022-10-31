@@ -18,7 +18,7 @@ pip install miskibin
 
 ## [miskibin.utils](src/miskibin/utils):
 module contains some useful functions, that i use in my projects.
-### `get_logger()`:
+### [get_logger()](src/miskibin/utils/utils.py):
 returns highly configurable logger object.
 - Every level has its own color. (If it is printed to terminal)
 - Problems with logging messages from `ipynb` cells are resolved.
