@@ -1,10 +1,11 @@
 import numpy as np
+from logging import Logger
 from numpy.linalg import LinAlgError
 from miskibin.utils import get_logger
 
 
 class LinearModel:
-    def __init__(self, method: str = "analitical", logger=get_logger()):
+    def __init__(self, method: str = "analitical", logger: Logger = get_logger()):
         self.logger = logger
         self.fit_func = method
         self.params = None
