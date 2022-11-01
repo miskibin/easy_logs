@@ -37,6 +37,7 @@ returns highly configurable logger object.
 #### Example 1:
 
 ```python
+from miskibin.utils import get_logger
 logger = get_logger()
 logger.debug("debug")
 logger.info("info")
@@ -52,6 +53,7 @@ logger.critical("critical")
 #### example 2:
 
 ```python
+from miskibin.utils import get_logger
 logger = get_logger(
     datefmt="%Y-%m-%d %H:%M:%S",
     format="%(asctime)s %(levelname)s %(funcName)s %(message)s",
