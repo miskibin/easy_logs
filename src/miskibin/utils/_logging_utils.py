@@ -5,7 +5,7 @@ class ColoredFormatter(logging.Formatter):
     def __init__(self, fmt, datefmt):
         super().__init__()
         self.fmt = fmt
-        grey = "\x1b[38;20m"
+        purple = "\x1b[34;20m"
         green = "\x1b[32;20m"
         yellow = "\x1b[33;20m"
         red = "\x1b[31;20m"
@@ -13,7 +13,7 @@ class ColoredFormatter(logging.Formatter):
         reset = "\x1b[0m"
         self.datefmt = datefmt
         self.FORMATS = {
-            logging.DEBUG: grey + self.fmt + reset,
+            logging.DEBUG: purple + self.fmt + reset,
             logging.INFO: green + self.fmt + reset,
             logging.WARNING: yellow + self.fmt + reset,
             logging.ERROR: red + self.fmt + reset,
