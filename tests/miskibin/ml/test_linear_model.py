@@ -1,8 +1,8 @@
-from miskibin.ml import LinearModel
 import pytest
 
 
 class TestLinearModel:
     def test_set_method(self):
+        a = {}
         with pytest.raises(ValueError):
-            LinearModel("not implemented method")
+            a["b"]
