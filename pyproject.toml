@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "miskibin"
-version = "1.0.2"
+version = "1.0.3"
 description = "this is an library with utils for my studies."
 readme = "readme.md"
 authors = [{ name = "Michał Skibiński", email = "mskibinski109@gmail.com" }]
