@@ -12,20 +12,13 @@ could not find anywhere else.
 pip install miskibin
 ```
 
-## modules:
-
-- [miskibin.utils:](#miskibinutils)
-  - [get_logger()](#get_logger)
-- [miskibin.ml](#miskibinml)
-  - [LinearModel](#linearmodel)
-- [miskibin.cn](#miskibincn)
-  - [AnimatedGraph](#AnimatedGraph)
-
-## [miskibin.utils](src/miskibin/utils):
+## description
 
 module contains some useful functions, that i use in my projects.
 
-### [get_logger()](src/miskibin/utils/utils.py):
+## usage
+
+### get_logger
 
 returns highly configurable logger object.
 
@@ -75,20 +68,3 @@ example_func()
 #### output:
 
 <img src="advenced_logging.png" width="500"/>
-
-## [miskibin.ml](src/miskibin/ml):
-
-Machine learning module. Contains models, functions and classes for machine learning.
-
-### LinearModel:
-
-model with analytical solution for linear regression.
-Implemnted from math formulas.
-
-## [miskibin.cn](src/miskibin/cn):
-
-module for working with complex networks.
-
-### AnimatedGraph:
-
-creates animated graph to visualize how some 'virus' spreads through network.

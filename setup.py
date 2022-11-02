@@ -5,7 +5,7 @@ import setuptools
 setup(
     name="miskibin",
     package_dir={"": "src"},
-    version="1.0.4",
+    version="1.0.5",
     author="Michał Skibiński",
     description="This is package with useful tools",
     long_description="This is a package  with useful tools",

@@ -24,6 +24,7 @@ def get_logger(
         `datefmt`: date format for logging formatter.
         `disable_existing_loggers`: if True, disable existing loggers.
     """
+
     if disable_existing_loggers:
         logging.config.dictConfig(
             {
@@ -33,6 +34,8 @@ def get_logger(
         )
 
     logger = getLogger(logger_name)
+    if logger.handlers:
+        logger.handlers.clear()
     logger.addFilter(filter_log_record)
     logger.setLevel(lvl)
     logger.addHandler(logging.StreamHandler())
