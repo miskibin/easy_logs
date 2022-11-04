@@ -26,7 +26,12 @@ returns highly configurable logger object.
 - Problems with logging messages from `ipynb` cells are resolved.
 - Includes validation for file name and path.
 - Has `disable_existing_loggers` param to disable all other loggers.
-
+#### params:
+   - `file_name`: file that logs will be saved to. If None, logs will not saved to file.
+   - `lvl`: logging level. Default is 20 (info). to see debug logs, set it to `10` or `'DEBUG'`.
+   - `formatter`: logging formatter.
+   - `datefmt`: date format for logging formatter.
+   - `disable_existing_loggers`: if True, disable existing loggers.
 #### Example 1:
 
 ```python
