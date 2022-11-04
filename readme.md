@@ -57,6 +57,7 @@ logger = get_logger(
     format="%(asctime)s %(levelname)s %(funcName)s %(message)s",
     disable_existing_loggers=True,
     logger_name="test2",
+    file_name = None,
     lvl="INFO",
 )
 
