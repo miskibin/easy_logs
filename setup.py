@@ -1,7 +1,9 @@
 import setuptools
+import os
 
-with open("readme.md", "r") as fh:
-    long_description = fh.read()
+path = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(path, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
 
 setuptools.setup(
     name="miskibin",
