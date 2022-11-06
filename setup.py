@@ -1,8 +1,11 @@
 import setuptools
-import os
+from pathlib import Path
 
-readme = os.path.join(os.path.dirname(__file__), "readme.md")
-with open(readme, encoding="utf-8") as f:
+
+# make path to readme to be readable to github worker
+
+readme_path = Path(__file__).parent / "README.md"
+with open(readme_path, encoding="utf-8") as f:
     long_description = f.read()
 
 setuptools.setup(
