@@ -1,12 +1,5 @@
 import setuptools
-from pathlib import Path
 
-
-# make path to readme to be readable to github worker
-
-readme_path = Path("README.md").resolve()
-with open(readme_path, encoding="utf-8") as f:
-    long_description = f.read()
 
 setuptools.setup(
     name="miskibin",
@@ -14,8 +7,7 @@ setuptools.setup(
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
     description="My personal package for colored logs. Highly customizable.",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description="My personal package for colored logs. Highly customizable.",
     url="https://github.com/michalskibinski109/miskibin",
     packages=setuptools.find_packages(),
     classifiers=[
