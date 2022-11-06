@@ -1,16 +1,22 @@
-# setup.py sdist bdist_wheel
-from setuptools import setup
 import setuptools
 
-setup(
+with open("readme.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
     name="miskibin",
-    package_dir={"": "src"},
-    version="1.0.5",
+    version="1.0.6",
     author="Michał Skibiński",
-    description="This is package with useful tools",
-    long_description="This is a package  with useful tools",
+    author_email="mskibinski109@gmail.com",
+    description="My personal package for colored logs. Highly customizable.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/michalskibinski109/miskibin",
-    python_requires=">=3.7, <4",
-    packages=["miskibin"],
-    license="MIT",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.8",
 )
