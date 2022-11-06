@@ -4,7 +4,7 @@ from pathlib import Path
 
 # make path to readme to be readable to github worker
 
-readme_path = Path(__file__).parent / "README.md"
+readme_path = Path().cwd() / "README.md"
 with open(readme_path, encoding="utf-8") as f:
     long_description = f.read()
 
