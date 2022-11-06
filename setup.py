@@ -1,7 +1,7 @@
 import setuptools
 import os
 
-readme = os.path.join(os.path.dirname(__file__), "README.md")
+readme = os.path.join(os.path.dirname(__file__), "readme.md")
 with open(readme, encoding="utf-8") as f:
     long_description = f.read()
 
