@@ -12,7 +12,7 @@ class ColoredFormatter(logging.Formatter):
         bold_red = "\x1b[31;1m"
         reset = "\x1b[0m"
         self.datefmt = datefmt
-        self.FORMATS = {
+        self.formats = {
             logging.DEBUG: purple + self.fmt + reset,
             logging.INFO: green + self.fmt + reset,
             logging.WARNING: yellow + self.fmt + reset,
@@ -21,7 +21,7 @@ class ColoredFormatter(logging.Formatter):
         }
 
     def format(self, record):
-        log_fmt = self.FORMATS.get(record.levelno)
+        log_fmt = self.formats.get(record.levelno)
         formatter = logging.Formatter(log_fmt, self.datefmt)
         return formatter.format(record)
 

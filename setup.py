@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="miskibin",
-    version="1.0.6",
+    version="1.0.7",
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
     description="My personal package for colored logs. Highly customizable.",
