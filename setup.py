@@ -16,7 +16,7 @@ setuptools.setup(
     description="My personal package for colored logs. Highly customizable.",
     long_description_content_type="text/markdown",
     long_description=long_description,
-    files_to_include=["miskibin"],
+    files_to_include=["miskibin", "readme.md"],
     url="https://github.com/michalskibinski109/miskibin",
     packages=setuptools.find_packages(),
     classifiers=[
