@@ -2,7 +2,7 @@ import setuptools
 from pathlib import Path
 
 
-readme_path = Path(__file__).parent / "README.md"
+readme_path = Path(__file__).parent / "readme.md"
 readme_path = readme_path.resolve()
 with open(readme_path, "r") as fh:
     long_description = fh.read()
