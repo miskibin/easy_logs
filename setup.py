@@ -1,7 +1,10 @@
 import setuptools
 from pathlib import Path
 
-with open("README.md", "r") as fh:
+
+readme_path = Path(__file__).parent / "README.md"
+readme_path = readme_path.resolve()
+with open(readme_path, "r") as fh:
     long_description = fh.read()
 
 
@@ -13,6 +16,7 @@ setuptools.setup(
     description="My personal package for colored logs. Highly customizable.",
     long_description_content_type="text/markdown",
     long_description=long_description,
+    files_to_include=["miskibin"],
     url="https://github.com/michalskibinski109/miskibin",
     packages=setuptools.find_packages(),
     classifiers=[
