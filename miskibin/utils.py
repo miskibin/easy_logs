@@ -22,7 +22,8 @@ def get_logger(
         `lvl`: logging level. Default is 10 (DEBUG).
         `file_name`: file that logs will be saved to. If None, logs will not be saved to file.
         `formatter`: logging formatter.
-        `datefmt`: date format for logging formatter. Define only if `(asctime)` in format Default is "%H:%M:%S".
+        `datefmt`: date format for logging formatter. Define only if `(asctime)`
+        in format Default is "%H:%M:%S".
         `disable_existing_loggers`: if True, disable existing loggers.
     """
 
