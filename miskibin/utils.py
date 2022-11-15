@@ -2,6 +2,7 @@ from pathlib import Path
 import logging.config
 from logging import Logger, getLogger
 from ._logging_utils import ColoredFormatter, filter_log_record
+from typing import Union
 
 
 class FailedToLoadLoggingConfigException(Exception):
@@ -10,7 +11,7 @@ class FailedToLoadLoggingConfigException(Exception):
 
 def get_logger(
     logger_name: str = "miskibin",
-    lvl: int = 20,
+    lvl: Union[int, str] = 20,
     file_name: str = None,
     format: str = "%(message)s (%(filename)s:%(lineno)d)",
     datefmt: str = "%H:%M:%S",

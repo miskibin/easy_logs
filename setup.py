@@ -33,11 +33,12 @@ returns highly configurable logger object.
 - `format`: [logging format](https://docs.python.org/3/library/logging.html#logrecord-attributes).
 - `datefmt`: date format for logging formatter. Define only if `(asctime)` in format Default is "%H:%M:%S".
 - `disable_existing_loggers`: if True, disable existing loggers.
+
 #### Example 1:
 
 ```python
 from miskibin.utils import get_logger
-logger = get_logger()
+logger = get_logger(lvl = 10)
 logger.debug("debug")
 logger.info("info")
 logger.warning("warning")
@@ -46,8 +47,7 @@ logger.critical("critical")
 ```
 
 #### output:
-
-<img src="https://github.com/michalskibinski109/miskibin/blob/main/logging.png" width="500"/>
+<img src="https://user-images.githubusercontent.com/77834536/201940080-28e7dc08-ac99-4f8d-8f24-a9e0c6ac06c2.png" width="500"/>
 
 #### example 2:
 
@@ -74,13 +74,13 @@ example_func()
 
 #### output:
 
-<img src="https://github.com/michalskibinski109/miskibin/blob/main/advenced_logging.png" width="500"/>
+<img src="https://user-images.githubusercontent.com/77834536/201939466-228b110f-21de-4461-9c86-55f8f46652ef.png" width="500"/>
 
 """
 
 setuptools.setup(
     name="miskibin",
-    version="1.1.0",
+    version="1.1.1",
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
     description="My personal package for colored logs. Highly customizable.",
