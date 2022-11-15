@@ -46,8 +46,7 @@ logger.critical("critical")
 ```
 
 #### output:
-
-<img src="https://user-images.githubusercontent.com/77834536/201939549-4f4c2a63-3efa-405d-97b0-d9c3d4b58584.png" width="500"/>
+<img src="https://user-images.githubusercontent.com/77834536/201940080-28e7dc08-ac99-4f8d-8f24-a9e0c6ac06c2.png" width="500"/>
 
 #### example 2:
 
