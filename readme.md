@@ -37,7 +37,7 @@ returns highly configurable logger object.
 
 ```python
 from miskibin.utils import get_logger
-logger = get_logger()
+logger = get_logger(lvl = 10)
 logger.debug("debug")
 logger.info("info")
 logger.warning("warning")
@@ -47,7 +47,7 @@ logger.critical("critical")
 
 #### output:
 
-<img src="https://user-images.githubusercontent.com/77834536/201939549-bda209e0-fdf5-4ce4-a869-320121460fba.png" width="500"/>
+<img src="https://user-images.githubusercontent.com/77834536/201939549-4f4c2a63-3efa-405d-97b0-d9c3d4b58584.png" width="500"/>
 
 #### example 2:
 
