@@ -47,7 +47,7 @@ logger.critical("critical")
 
 #### output:
 
-<img src="logging.png" width="500"/>
+<img src="https://user-images.githubusercontent.com/77834536/201939549-bda209e0-fdf5-4ce4-a869-320121460fba.png" width="500"/>
 
 #### example 2:
 
@@ -74,4 +74,4 @@ example_func()
 
 #### output:
 
-<img src="advenced_logging.png" width="500"/>
+<img src="https://user-images.githubusercontent.com/77834536/201939466-228b110f-21de-4461-9c86-55f8f46652ef.png" width="500"/>
