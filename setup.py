@@ -1,16 +1,16 @@
 import setuptools
 
 long_description = """
+![example workflow](https://github.com/michalskibinski109/miskibin/actions/workflows/python-app.yml/badge.svg)
+[![PyPI version](https://badge.fury.io/py/miskibin.svg)](https://badge.fury.io/py/miskibin)
+
 # miskibin
 
 this repo contains some of my scripts and tools, that i
 could not find anywhere else.
 
-## installation:
-
-```bash
-pip install miskibin
-```
+## repository
+https://github.com/michalskibinski109/miskibin
 
 ## description
 
@@ -26,19 +26,61 @@ returns highly configurable logger object.
 - Problems with logging messages from `ipynb` cells are resolved.
 - Includes validation for file name and path.
 - Has `disable_existing_loggers` param to disable all other loggers.
-#### options:
+#### params:
 - `logger_name` - name of the logger
 - `lvl`: [logging level](https://docs.python.org/3/library/logging.html#logging-levels). Default is 10 (DEBUG).
 - `file_name`: file that logs will be saved to. If None, logs will not be saved to file.
 - `format`: [logging format](https://docs.python.org/3/library/logging.html#logrecord-attributes).
 - `datefmt`: date format for logging formatter. Define only if `(asctime)` in format Default is "%H:%M:%S".
 - `disable_existing_loggers`: if True, disable existing loggers.
+#### Example 1:
+
+```python
+from miskibin.utils import get_logger
+logger = get_logger()
+logger.debug("debug")
+logger.info("info")
+logger.warning("warning")
+logger.error("error")
+logger.critical("critical")
+```
+
+#### output:
+
+<img src="logging.png" width="500"/>
+
+#### example 2:
+
+```python
+from miskibin.utils import get_logger
+logger = get_logger(
+    datefmt="%Y-%m-%d %H:%M:%S",
+    format="%(asctime)s %(levelname)s %(funcName)s %(message)s",
+    disable_existing_loggers=True,
+    logger_name="test2",
+    file_name = None,
+    lvl="INFO",
+)
+
+
+def example_func():
+    logger.debug("debug")
+    logger.info("info")
+    logger.warning("warning")
+    logger.error("error")
+    logger.critical("critical")
+example_func()
+```
+
+#### output:
+
+<img src="advenced_logging.png" width="500"/>
 
 """
 
 setuptools.setup(
     name="miskibin",
-    version="1.0.8",
+    version="1.0.9",
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
     description="My personal package for colored logs. Highly customizable.",
