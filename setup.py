@@ -47,7 +47,7 @@ logger.critical("critical")
 
 #### output:
 
-<img src="logging.png" width="500"/>
+<img src="https://github.com/michalskibinski109/miskibin/blob/main/logging.png" width="500"/>
 
 #### example 2:
 
@@ -74,13 +74,13 @@ example_func()
 
 #### output:
 
-<img src="advenced_logging.png" width="500"/>
+<img src="https://github.com/michalskibinski109/miskibin/blob/main/advenced_logging.png" width="500"/>
 
 """
 
 setuptools.setup(
     name="miskibin",
-    version="1.0.9",
+    version="1.1.0",
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
     description="My personal package for colored logs. Highly customizable.",
