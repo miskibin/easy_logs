@@ -1,6 +1,6 @@
 import setuptools
 
-long_description = """
+LONG_DESCRIPTION = """
 ![example workflow](https://github.com/michalskibinski109/miskibin/actions/workflows/python-app.yml/badge.svg)
 [![PyPI version](https://badge.fury.io/py/miskibin.svg)](https://badge.fury.io/py/miskibin)
 
@@ -85,7 +85,7 @@ setuptools.setup(
     author_email="mskibinski109@gmail.com",
     description="My personal package for colored logs. Highly customizable.",
     long_description_content_type="text/markdown",
-    long_description=long_description,
+    long_description=LONG_DESCRIPTION,
     files_to_include=["miskibin"],
     url="https://github.com/michalskibinski109/miskibin",
     packages=setuptools.find_packages(),

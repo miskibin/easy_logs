@@ -1,9 +1,9 @@
 import pytest
+
 from miskibin.utils import get_logger
 
 
 def test_get_logger():
-
     logger = get_logger()
     assert logger.name == "miskibin"
     assert logger.level == 20
