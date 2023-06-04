@@ -1,13 +1,11 @@
+from __future__ import annotations
 import logging.config
 from logging import Logger, getLogger
 from pathlib import Path
-from typing import Union
-
-from ._logging_utils import ColoredFormatter, filter_log_record
-
-
-class FailedToLoadLoggingConfigException(Exception):
-    pass
+from typing import Union, Literal
+from miskibin._logging_utils import ColoredFormatter, filter_log_record
+from typing import Annotated
+from dataclasses import dataclass
 
 
 def get_logger(
@@ -17,18 +15,35 @@ def get_logger(
     format: str = "%(message)s (%(filename)s:%(lineno)d)",
     datefmt: str = "%H:%M:%S",
     disable_existing_loggers: bool = False,
+    predefined_configuration: Literal["simple", "proffesional", "default"] = None,
 ) -> Logger:
-    """Get logger with colored logs and filter for ipynb cells.
-    Args:
-        `logger_name` - name of the logger
-        `lvl`: logging level. Default is 10 (DEBUG).
-        `file_name`: file that logs will be saved to. If None, logs will not be saved to file.
-        `formatter`: logging formatter.
-        `datefmt`: date format for logging formatter. Define only if `(asctime)`
-        in format Default is "%H:%M:%S".
-        `disable_existing_loggers`: if True, disable existing loggers.
     """
-
+    Get logger with colored logs and filter for ipynb cells.
+    Args:
+        logger_name:  name of the logger
+        lvl: logging level. Default is 20 (info).
+        file_name: file that logs will be saved to. If None, logs will not be saved to file.
+        formatter: logging formatter.
+        datefmt: date format for logging formatter. Define only if `(asctime)`
+        in format Default is "%H:%M:%S".
+        disable_existing_loggers: if True, disable existing loggers.
+        predefined_configuration: Choose predefined configuration. Will override all other arguments.
+        Available configurations:
+            simple: simple logger that works like print() but with colors
+            proffesional: saves logs to file, displays time, filename line number and lvl
+            default: default logger configuration
+    Returns:
+        Logger with colored logs and filter for ipynb cells.
+    """
+    if predefined_configuration:
+        try:
+            config = _LOGGERS[predefined_configuration]
+        except KeyError:
+            raise FailedToLoadLoggingConfigException(
+                f"Failed to load predefined configuration: {predefined_configuration}"
+            )
+        predefined_configuration = None
+        return get_logger(**config.__dict__)
     if disable_existing_loggers:
         logging.config.dictConfig(
             {
@@ -51,3 +66,44 @@ def get_logger(
         file_formatter = logging.Formatter(format, datefmt)
         logger.handlers[1].setFormatter(file_formatter)
     return logger
+
+
+# Predefined loggers:
+@dataclass
+class LoggingConfig:
+    logger_name: str = "miskibin"
+    lvl: Union[int, str] = 20
+    file_name: str = None
+    format: str = "%(message)s (%(filename)s:%(lineno)d)"
+    datefmt: str = "%H:%M:%S"
+    disable_existing_loggers: bool = False
+
+
+class FailedToLoadLoggingConfigException(Exception):
+    pass
+
+
+simple_logger_config = LoggingConfig(
+    logger_name="simple_logger",
+    format="%(message)s",
+    disable_existing_loggers=True,
+    lvl=10,
+)
+
+
+proffesional_logger_config = LoggingConfig(
+    logger_name="proffesional_logger",
+    file_name="logs.log",
+    format="%(asctime)20s | %(levelname)8s | %(filename)20s :%(lineno)4d | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+default_logger_config = LoggingConfig()
+
+_LOGGERS = {
+    "simple": simple_logger_config,
+    "proffesional": proffesional_logger_config,
+    "default": default_logger_config,
+}
+
+logger = get_logger(predefined_configuration="simple")
+logger.info("Logger loaded")

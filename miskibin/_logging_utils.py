@@ -1,4 +1,5 @@
 import logging
+from logging import _Level
 
 
 class ColoredFormatter(logging.Formatter):
