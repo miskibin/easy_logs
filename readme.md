@@ -33,6 +33,14 @@ returns highly configurable logger object.
 - `format`: [logging format](https://docs.python.org/3/library/logging.html#logrecord-attributes).
 - `datefmt`: date format for logging formatter. Define only if `(asctime)` in format Default is "%H:%M:%S".
 - `disable_existing_loggers`: if True, disable existing loggers.
+- `predefined_configuration`: Choose predefined configuration. Will override all other arguments
+
+#### predefined_configuration:
+- `default`: default configuration
+- `simple`: simple logger that works like print() but with colors
+- `profesionall`: saves logs to file, displays time, filename line number and lvl
+
+
 #### Example 1:
 
 ```python
@@ -74,3 +82,16 @@ example_func()
 #### output:
 
 <img src="https://user-images.githubusercontent.com/77834536/201939466-228b110f-21de-4461-9c86-55f8f46652ef.png" width="500"/>
+
+
+#### example 3:
+
+```python
+from miskibin import get_logger
+logger = get_logger(predefined_configuration="simple")
+logger.debug("debug")
+logger.info("info")
+logger.warning("warning")
+```
+
+#### output:

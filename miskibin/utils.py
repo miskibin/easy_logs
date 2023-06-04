@@ -70,7 +70,7 @@ def get_logger(
 
 # Predefined loggers:
 @dataclass
-class LoggingConfig:
+class _LoggingConfig:
     logger_name: str = "miskibin"
     lvl: Union[int, str] = 20
     file_name: str = None
@@ -83,7 +83,7 @@ class FailedToLoadLoggingConfigException(Exception):
     pass
 
 
-simple_logger_config = LoggingConfig(
+_simple_logger_config = _LoggingConfig(
     logger_name="simple_logger",
     format="%(message)s",
     disable_existing_loggers=True,
@@ -91,19 +91,16 @@ simple_logger_config = LoggingConfig(
 )
 
 
-proffesional_logger_config = LoggingConfig(
+_proffesional_logger_config = _LoggingConfig(
     logger_name="proffesional_logger",
     file_name="logs.log",
     format="%(asctime)20s | %(levelname)8s | %(filename)20s :%(lineno)4d | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
-default_logger_config = LoggingConfig()
+_default_logger_config = _LoggingConfig()
 
 _LOGGERS = {
-    "simple": simple_logger_config,
-    "proffesional": proffesional_logger_config,
-    "default": default_logger_config,
+    "simple": _simple_logger_config,
+    "proffesional": _proffesional_logger_config,
+    "default": _default_logger_config,
 }
-
-logger = get_logger(predefined_configuration="simple")
-logger.info("Logger loaded")
