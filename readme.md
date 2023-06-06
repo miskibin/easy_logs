@@ -33,7 +33,7 @@ returns highly configurable logger object.
 - `format`: [logging format](https://docs.python.org/3/library/logging.html#logrecord-attributes).
 - `datefmt`: date format for logging formatter. Define only if `(asctime)` in format Default is "%H:%M:%S".
 - `disable_existing_loggers`: if True, disable existing loggers.
-- `predefined_configuration`: Choose predefined configuration. Will override all other arguments
+- `predefined`: Choose predefined configuration. Will override all other arguments
 
 #### predefined_configuration:
 - `default`: default configuration

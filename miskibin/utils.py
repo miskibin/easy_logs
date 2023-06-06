@@ -15,7 +15,7 @@ def get_logger(
     format: str = "%(message)s (%(filename)s:%(lineno)d)",
     datefmt: str = "%H:%M:%S",
     disable_existing_loggers: bool = False,
-    predefined_configuration: Literal["simple", "proffesional", "default"] = None,
+    predefined: Literal["simple", "proffesional", "default"] = None,
 ) -> Logger:
     """
     Get logger with colored logs and filter for ipynb cells.
@@ -27,7 +27,7 @@ def get_logger(
         datefmt: date format for logging formatter. Define only if `(asctime)`
         in format Default is "%H:%M:%S".
         disable_existing_loggers: if True, disable existing loggers.
-        predefined_configuration: Choose predefined configuration. Will override all other arguments.
+        predefined: Choose predefined configuration. Will override all other arguments.
         Available configurations:
             simple: simple logger that works like print() but with colors
             proffesional: saves logs to file, displays time, filename line number and lvl
@@ -35,14 +35,14 @@ def get_logger(
     Returns:
         Logger with colored logs and filter for ipynb cells.
     """
-    if predefined_configuration:
+    if type:
         try:
-            config = _LOGGERS[predefined_configuration]
+            config = _LOGGERS[type]
         except KeyError:
             raise FailedToLoadLoggingConfigException(
-                f"Failed to load predefined configuration: {predefined_configuration}"
+                f"Failed to load predefined configuration: {type}"
             )
-        predefined_configuration = None
+        type = None
         return get_logger(**config.__dict__)
     if disable_existing_loggers:
         logging.config.dictConfig(
