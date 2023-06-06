@@ -80,7 +80,7 @@ example_func()
 
 setuptools.setup(
     name="miskibin",
-    version="1.2.3",
+    version="1.2.4",
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
     description="My personal package for colored logs. Highly customizable.",
