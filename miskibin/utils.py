@@ -35,14 +35,14 @@ def get_logger(
     Returns:
         Logger with colored logs and filter for ipynb cells.
     """
-    if type:
+    if predefined:
         try:
-            config = _LOGGERS[type]
+            config = _LOGGERS[predefined]
         except KeyError:
             raise FailedToLoadLoggingConfigException(
-                f"Failed to load predefined configuration: {type}"
+                f"Failed to load predefined configuration: {predefined}"
             )
-        type = None
+        predefined = None
         return get_logger(**config.__dict__)
     if disable_existing_loggers:
         logging.config.dictConfig(
