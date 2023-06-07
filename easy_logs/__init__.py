@@ -19,6 +19,6 @@ Author: Michał Skibiński
 Contact: mskibinski109@gmail.com
 """
 
-from .main import get_logger
+from .main import get_logger, ColoredFormatter
 
 __all__ = ["get_logger", "ColoredFormatter"]

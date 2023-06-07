@@ -102,14 +102,14 @@ logger.warning("warning")
 """
 
 setuptools.setup(
-    name="easy_logging",
-    version="1.2.0",
+    name="easy_logs",
+    version="1.0.0",
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
     description="My personal package for colored logs. Highly customizable.",
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
-    files_to_include=["easy_logging"],
+    files_to_include=["easy_logs"],
     package_data={"readme": ["readme.md"]},
     url="https://github.com/michalskibinski109/easy_logging",
     packages=setuptools.find_packages(),
