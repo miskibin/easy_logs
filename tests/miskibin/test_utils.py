@@ -1,6 +1,6 @@
 import pytest
 
-from miskibin.utils import get_logger
+from easy_logging.main import get_logger
 
 
 def test_get_logger():
