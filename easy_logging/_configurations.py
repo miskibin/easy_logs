@@ -11,6 +11,7 @@ class _LoggingConfig:
     format: str = "%(message)s (%(filename)s:%(lineno)d)"
     datefmt: str = "%H:%M:%S"
     disable_existing_loggers: bool = False
+    colored: bool = True
 
 
 _simple_logger_config = _LoggingConfig(
