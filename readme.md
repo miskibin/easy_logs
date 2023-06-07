@@ -1,7 +1,7 @@
 ![example workflow](https://github.com/michalskibinski109/miskibin/actions/workflows/python-app.yml/badge.svg)
 [![PyPI version](https://badge.fury.io/py/miskibin.svg)](https://badge.fury.io/py/miskibin)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
-# miskibin
+# easy_logging
 
 this repo contains some of my scripts and tools, that i
 could not find anywhere else.
@@ -9,16 +9,18 @@ could not find anywhere else.
 ## installation:
 
 ```bash
-pip install miskibin
+pip install easy_logging
 ```
 
 ## description
+This module provides a convenient way to create loggers with colored logs and filtering for IPython/Jupyter Notebook cells.
 
-module contains some useful functions, that i use in my projects.
+The main function `get_logger` can be used to obtain a logger with various configurations, including colored logs, saving logs to a file, and specifying log formatting. Additionally, it supports predefined configurations that simplify logger setup.
+
 
 ## usage
 
-### get_logger
+### `get_logger`
 
 returns highly configurable logger object.
 
@@ -44,7 +46,7 @@ returns highly configurable logger object.
 #### Example 1:
 
 ```python
-from miskibin.utils import get_logger
+from easy_logging.utils import get_logger
 logger = get_logger(lvl = 10)
 logger.debug("debug")
 logger.info("info")
@@ -59,7 +61,7 @@ logger.critical("critical")
 #### example 2:
 
 ```python
-from miskibin.utils import get_logger
+from easy_logging.utils import get_logger
 logger = get_logger(
     datefmt="%Y-%m-%d %H:%M:%S",
     format="%(asctime)s %(levelname)s %(funcName)s %(message)s",
@@ -87,8 +89,8 @@ example_func()
 #### example 3:
 
 ```python
-from miskibin import get_logger
-logger = get_logger(predefined_configuration="simple")
+from easy_logging import get_logger
+logger = get_logger(predefined="simple")
 logger.debug("debug")
 logger.info("info")
 logger.warning("warning")
