@@ -20,7 +20,7 @@ def get_logger(
     colored: bool = True,
     predefined: Literal[
         "simple", "litteral", "profesionall"
-    ] = None,  # for future versions [*(str(name) for name in _LOGGERS.keys())].
+    ] = None,  # for future versions [*(str(name) for name in _LOGGERS.keys())]
 ) -> Logger:
     """
     Get a logger with colored logs and filtering for IPython/Jupyter Notebook cells.
