@@ -2,8 +2,8 @@ import logging.config
 from logging import Logger, getLogger
 from pathlib import Path
 from typing import Union, Literal
-from easy_logging._logging_utils import ColoredFormatter, filter_log_record
-from _configurations import _LOGGERS
+from easy_logs._logging_utils import ColoredFormatter, filter_log_record
+from easy_logs._configurations import _LOGGERS
 
 
 class FailedToLoadLoggingConfigException(Exception):

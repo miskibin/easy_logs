@@ -14,24 +14,21 @@ class _LoggingConfig:
     colored: bool = True
 
 
-_simple_logger_config = _LoggingConfig(
-    logger_name="simple_logger",
-    format="%(message)s",
-    disable_existing_loggers=True,
-    lvl=10,
-)
+class Configs:
+    simple_logger_config = _LoggingConfig(
+        logger_name="simple_logger",
+        format="%(message)s",
+        disable_existing_loggers=True,
+        lvl=10,
+    )
+
+    profesionall_logger_config = _LoggingConfig(
+        logger_name="proffesional_logger",
+        file_name="logs.log",
+        format="%(asctime)20s | %(levelname)8s | %(filename)20s :%(lineno)4d | %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
+    default_logger_config = _LoggingConfig()
 
 
-_proffesional_logger_config = _LoggingConfig(
-    logger_name="proffesional_logger",
-    file_name="logs.log",
-    format="%(asctime)20s | %(levelname)8s | %(filename)20s :%(lineno)4d | %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
-_default_logger_config = _LoggingConfig()
-
-_LOGGERS = {
-    "simple": _simple_logger_config,
-    "proffesional": _proffesional_logger_config,
-    "default": _default_logger_config,
-}
+_LOGGERS = {name.split("_")[0]: config for name, config in Configs.__dict__.items()}

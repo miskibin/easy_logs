@@ -1,7 +1,7 @@
 ![example workflow](https://github.com/michalskibinski109/miskibin/actions/workflows/python-app.yml/badge.svg)
 [![PyPI version](https://badge.fury.io/py/miskibin.svg)](https://badge.fury.io/py/miskibin)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
-# easy_logging
+# easy_logs
 
 this repo contains some of my scripts and tools, that i
 could not find anywhere else.
@@ -9,7 +9,7 @@ could not find anywhere else.
 ## installation:
 
 ```bash
-pip install easy_logging
+pip install easy_logs
 ```
 
 ## description
@@ -46,7 +46,7 @@ returns highly configurable logger object.
 #### Example 1:
 
 ```python
-from easy_logging.utils import get_logger
+from easy_logs.utils import get_logger
 logger = get_logger(lvl = 10)
 logger.debug("debug")
 logger.info("info")
@@ -61,7 +61,7 @@ logger.critical("critical")
 #### example 2:
 
 ```python
-from easy_logging.utils import get_logger
+from easy_logs.utils import get_logger
 logger = get_logger(
     datefmt="%Y-%m-%d %H:%M:%S",
     format="%(asctime)s %(levelname)s %(funcName)s %(message)s",
@@ -89,7 +89,7 @@ example_func()
 #### example 3:
 
 ```python
-from easy_logging import get_logger
+from easy_logs import get_logger
 logger = get_logger(predefined="simple")
 logger.debug("debug")
 logger.info("info")
