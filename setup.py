@@ -103,10 +103,10 @@ logger.warning("warning")
 
 setuptools.setup(
     name="easy_logs",
-    version="1.0.0",
+    version="1.0.1",
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
-    description="My personal package for colored logs. Highly customizable.",
+    description="package for easy colored logs with predefined configurations.",
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     files_to_include=["easy_logs"],
