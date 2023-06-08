@@ -6,12 +6,12 @@ LONG_DESCRIPTION = """
 [![PyPI version](https://badge.fury.io/py/easy_logs.svg)](https://badge.fury.io/py/miskibin)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 # easy_logs
-[Documentation](https://github.com/michalskibinski109/easy_logs/readme.md)
+[Documentation](https://github.com/michalskibinski109/easy_logs/tree/main#readme)
 """
 
 setuptools.setup(
     name="easy_logs",
-    version="1.1.1",
+    version="1.1.2",
     author="Michał Skibiński",
     author_email="mskibinski109@gmail.com",
     description="package for easy colored logs with predefined configurations.",
