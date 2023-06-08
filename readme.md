@@ -81,10 +81,14 @@ example_func()
 
 ```python
 from easy_logs import get_logger
-logger = get_logger(predefined="simple")
-logger.debug("debug")
-logger.info("info")
-logger.warning("warning")
+
+logger = get_logger(predefined="profesionall")
+logger.info("Everything is OK!")
+logger.warning("I'm worried about something...")
+logger.error("Something went wrong...")
+logger.critical("Let's panic!")
+
 ```
 
 #### output:
+<img src="https://github.com/michalskibinski109/easy_logs/assets/77834536/20d9602b-86f4-4ffb-b8d1-48686eb8d3d0" width="800"/>
