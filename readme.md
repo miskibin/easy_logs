@@ -91,4 +91,4 @@ logger.critical("Let's panic!")
 ```
 
 #### output:
-<img src="https://github.com/michalskibinski109/easy_logs/assets/77834536/20d9602b-86f4-4ffb-b8d1-48686eb8d3d0" width="500"/>
+<img src="https://github.com/michalskibinski109/easy_logs/assets/77834536/20d9602b-86f4-4ffb-b8d1-48686eb8d3d0" width="800"/>
