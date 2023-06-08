@@ -3,26 +3,17 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 # easy_logs
 
-this repo contains some of my scripts and tools, that i
-could not find anywhere else.
-
+Did you ever regret that logging in python is so complicated?
+Have you ever wanted to have a logger that is easy to use and has colored logs? If so, this module is for you.
 ## installation:
 
 ```bash
 pip install easy_logs
 ```
 
-## description
-This module provides a convenient way to create loggers with colored logs and filtering for IPython/Jupyter Notebook cells.
+### Usage
 
-The main function `get_logger` can be used to obtain a logger with various configurations, including colored logs, saving logs to a file, and specifying log formatting. Additionally, it supports predefined configurations that simplify logger setup.
-
-
-## usage
-
-### `get_logger`
-
-returns highly configurable logger object.
+`get_logger` returns highly configurable logger object.
 
 - Every level has its own color. (If it is printed to terminal)
 - Problems with logging messages from `ipynb` cells are resolved.
