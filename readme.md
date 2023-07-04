@@ -1,5 +1,5 @@
 ![example workflow](https://github.com/michalskibinski109/easy_logs/actions/workflows/python-app.yml/badge.svg)
-[![PyPI version](https://badge.fury.io/py/easy_logs.svg)](https://badge.fury.io/py/miskibin)
+[![PyPI version](https://badge.fury.io/py/easy_logs.svg)](https://badge.fury.io/py/easy_logs)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 # easy_logs
 
